@@ -1,0 +1,99 @@
+﻿@model IEnumerable<Vet_Surgery_System.Models.Pet>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.D_O_B)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Parent_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Colour)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Notes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pedigree)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_Time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Breed.Specie_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Owner.F_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Treatment.Detail)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.D_O_B)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Parent_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Colour)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Notes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pedigree)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date_Time)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Breed.Specie_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Owner.F_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Treatment.Detail)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.P_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.P_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.P_Id })
+        </td>
+    </tr>
+}
+
+</table>
